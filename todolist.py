@@ -16,7 +16,7 @@ class Todolist(QMainWindow):
         self.today_tasks = 0
         self.tasks = []   
 
-        uic.loadUi("tab_task_file.ui",self)
+        uic.loadUi("todolist.ui",self)
 
         self.tab = self.findChild(QTabWidget,"All_task")
         self.all_frame = self.findChild(QFrame,"all_frame")
@@ -407,3 +407,4 @@ if __name__ == "__main__":
     window.show()
 
     sys.exit(app.exec_())
+
