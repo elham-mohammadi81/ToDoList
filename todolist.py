@@ -16,7 +16,7 @@ class Todolist(QMainWindow):
         self.today_tasks = 0
         self.tasks = []   
 
-        uic.loadUi("G:/Python/Projects/ToDoList/tab_task_file.ui",self)
+        uic.loadUi("tab_task_file.ui",self)
 
         self.tab = self.findChild(QTabWidget,"All_task")
         self.all_frame = self.findChild(QFrame,"all_frame")
@@ -66,14 +66,14 @@ class Todolist(QMainWindow):
         edit_button.resize(70, 31)
         edit_button.setStyleSheet("background-color:#A7C1A8; border-radius:10px;")
         edit_button.move(470, 40)
-        edit_button.setIcon(QIcon("G:/Python/Projects/ToDoList/icons8-edit-48.png"))
+        edit_button.setIcon(QIcon("icons8-edit-48.png"))
         edit_button.show()
 
         delete_button = QPushButton("", frame_today)
         delete_button.resize(70, 31)
         delete_button.setStyleSheet("background-color:#A7C1A8; border-radius:10px;")
         delete_button.move(552, 40)
-        delete_button.setIcon(QIcon("G:/Python/Projects/ToDoList/icons8-trash-can-48.png"))
+        delete_button.setIcon(QIcon("icons8-trash-can-48.png"))
         delete_button.show()
 
 
@@ -111,7 +111,7 @@ class Todolist(QMainWindow):
             self.edit_button.resize(70, 31)
             self.edit_button.setStyleSheet("color: #262626 ; background-color:#A7C1A8 ; border-radius : 10px ;")
             self.edit_button.move(470, 40)
-            self.edit_button.setIcon(QIcon("G:/Python/Projects/ToDoList/icons8-edit-48.png"))
+            self.edit_button.setIcon(QIcon("icons8-edit-48.png"))
             self.edit_button.show()
 
             self.delete_button = QPushButton("" ,self.frame_new_task)
@@ -119,7 +119,7 @@ class Todolist(QMainWindow):
             self.delete_button.resize(70, 31)
             self.delete_button.setStyleSheet(" color: #262626 ; background-color:#A7C1A8 ; border-radius : 10px ;")
             self.delete_button.move(552, 40)
-            self.delete_button.setIcon(QIcon("G:/Python/Projects/ToDoList/icons8-trash-can-48.png"))
+            self.delete_button.setIcon(QIcon("icons8-trash-can-48.png"))
             self.delete_button.show()
 
             task_data = {
@@ -133,8 +133,6 @@ class Todolist(QMainWindow):
             }
 
             self.tasks.append(task_data)
-            # print(self.tasks)
-            # print(task_data)
 
             self.complete_radio.toggled.connect(lambda : self.complete_task_today(task_data,name,description,date))
             self.edit_button.clicked.connect(lambda: self.edit_task_today(task_data))
@@ -181,7 +179,7 @@ class Todolist(QMainWindow):
         self.delete_button.resize(70, 31)
         self.delete_button.setStyleSheet(" color: #262626 ; background-color:#A7C1A8 ; border-radius : 10px ;")
         self.delete_button.move(552, 40)
-        self.delete_button.setIcon(QIcon("G:/Python/Projects/ToDoList/icons8-trash-can-48.png"))
+        self.delete_button.setIcon(QIcon("icons8-trash-can-48.png"))
         self.delete_button.show()
             
 
@@ -235,7 +233,7 @@ class Todolist(QMainWindow):
         self.edit_button.resize(70, 31)
         self.edit_button.setStyleSheet("color: #262626 ; background-color:#A7C1A8 ; border-radius : 10px ;")
         self.edit_button.move(470, 40)
-        self.edit_button.setIcon(QIcon("G:/Python/Projects/ToDoList/icons8-edit-48.png"))
+        self.edit_button.setIcon(QIcon("icons8-edit-48.png"))
         self.edit_button.show()
 
         self.delete_button = QPushButton("" ,self.frame_new_task)
@@ -243,7 +241,7 @@ class Todolist(QMainWindow):
         self.delete_button.resize(70, 31)
         self.delete_button.setStyleSheet(" color: #262626 ; background-color:#A7C1A8 ; border-radius : 10px ;")
         self.delete_button.move(552, 40)
-        self.delete_button.setIcon(QIcon("G:/Python/Projects/ToDoList/icons8-trash-can-48.png"))
+        self.delete_button.setIcon(QIcon("icons8-trash-can-48.png"))
         self.delete_button.show()
 
         task_data = {
@@ -304,7 +302,7 @@ class Todolist(QMainWindow):
         self.delete_button.resize(70, 31)
         self.delete_button.setStyleSheet(" color: #262626 ; background-color:#A7C1A8 ; border-radius : 10px ;")
         self.delete_button.move(552, 40)
-        self.delete_button.setIcon(QIcon("G:/Python/Projects/ToDoList/icons8-trash-can-48.png"))
+        self.delete_button.setIcon(QIcon("icons8-trash-can-48.png"))
         self.delete_button.show()
         
 
@@ -326,7 +324,7 @@ class Add_Task(QMainWindow):
         super(Add_Task,self).__init__()
 
         # Load Ui File
-        uic.loadUi("G:/Python/Projects/ToDoList/Add_Task_file.ui",self)
+        uic.loadUi("Add_Task_file.ui",self)
 
         # Define All Widgets
         self.frame = self.findChild(QFrame,"frame")
@@ -407,4 +405,5 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = Todolist()
     window.show()
+
     sys.exit(app.exec_())
